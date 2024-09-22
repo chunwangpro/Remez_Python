@@ -65,7 +65,9 @@ def ensemble_polynomial(an, use_smart_round=True, keep_all_zeros=False, keep_fir
 
 if __name__ == "__main__":
     an = [1.9999999999999425, -2.4999999999999996, 1]
-    # an = [1, 0.0, 2.5, -1, 0, 1, 0, 0]
+    px = ensemble_polynomial(an)
+    print(px)
 
+    an = [1, 0.0, 2.5, -1, 0, 1, 0, 0]
     px = ensemble_polynomial(an)
     print(px)

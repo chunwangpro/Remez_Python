@@ -28,8 +28,16 @@ def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30):
         A dictionary containing the history of the iterative process with keys:
         - 'px': list of polynomial approximations at each iteration.
         - 'xn': list of alternation points at each iteration.
-        - 'ind': list of indices corresponding to the largest error point at each iteration.
+        - 'ind': list of indices of alternation point corresponding to the largest error at each iteration.
         - 'e': list of the absolute errors at each iteration.
+
+    Examples
+    --------
+    >>> fx = "np.sin(x)"
+    >>> fx_der = "np.cos(x)"
+    >>> n = 2
+    >>> interval = [-1, 1]
+    >>> px, xn, history = remez(fx, fx_der, interval, n)
     """
 
     # Initial inference of xn (n + 2 points):

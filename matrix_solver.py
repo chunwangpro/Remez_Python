@@ -13,7 +13,7 @@ def matrix_solver(fx, fx_der, xn, interval, n):
     """
     Solve the system of linear equations: pn(xi) + (-1)^i * E = f(xi), where i = 0, 1,..., n+1.
 
-    The goal is to minimize the absolute error of the polynomial approximation for the current point sets (xn) and by calculating the residual between the function (fx) and the approximation polynomial (px), identify a new point set (xn_new), thereby further optimizing the approximation in subsequent steps.
+    The goal is to minimize the absolute error of the polynomial approximation for the current alternation point set (xn) and by calculating the residual between the function (fx) and the approximation polynomial (px), identify a new alternation point set (xn_new), thereby further optimizing the approximation in subsequent steps.
 
     Parameters
     ----------
@@ -35,18 +35,9 @@ def matrix_solver(fx, fx_der, xn, interval, n):
     xn_new : array-like
         The new set of `n+2` extremal points where the maximum absolute error occurs.
     ind : int
-        The index of the point with the largest absolute error.
+        The index of the alternation point set with the largest absolute error.
     e : float
         The value of system error term `E`.
-
-    Examples
-    --------
-    >>> fx = "np.sin(x)"
-    >>> fx_der = "np.cos(x)"
-    >>> xn = np.array([0, 0.5, 1])
-    >>> n = 2
-    >>> interval = [0, 1]
-    >>> an, xn_new, ind, e = matrix_solver(fx, fx_der, xn, n, interval)
     """
 
     x = sp.Symbol("x")
