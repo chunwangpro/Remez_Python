@@ -46,6 +46,8 @@ MAE of interpolation: 0.0021889162615582602
 
 ![single_3](./images/single_plot/single_3.png)
 
+Compare Remez approximation with Lagrange interpolation, as figure shows, our method has lower Max-Error and achieved equioscillation on the interval.
+
 ## Examples of smooth functions
 
 ### sin(x)
@@ -79,5 +81,7 @@ MAE of interpolation: 0.0021889162615582602
 ![single_4](./images/single_plot/single_4.png)
 
 ## Evaluation of error v.s. polynomial degrees
+
+Higher polynomial degree may result in lower error with a slight growth of time consumption.
 
 ![log-Max-Error_Versus_Degree](./images/log-Max-Error_Versus_Degree.png)
