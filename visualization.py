@@ -23,6 +23,7 @@ def visualization(fx, px, xn, history, interval, n, compare_interpolation=True):
     plt.title(f"Error on Interval {interval}, degree = {n}\nF(x)= {fx}")
     plt.legend(loc="center", bbox_to_anchor=(0.5, -0.25), ncol=4)
     plt.tight_layout()
+    plt.savefig(f"./images/single_plot/{fx}_{interval}_{n}.png", dpi=300)
     plt.show()
 
     print(f"f(x) = {fx}, interval = {interval}\n")
@@ -60,6 +61,7 @@ def visualization_pipeline(fx, px, xn, history, interval, n, history_error=None)
         plt.title(f"Error on Interval {interval}, degree = {n}\nF(x)= {fx}")
         plt.legend(loc="center", bbox_to_anchor=(0.5, -0.25), ncol=4)
         plt.tight_layout()
+        plt.savefig(f"./images/pipeline_plot/{fx}_{interval}_{n}.png", dpi=300)
         plt.show()
 
         print(f"f(x) = {fx}, interval = {interval}\n")
@@ -115,6 +117,7 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
         # xlim=(0.5, len(err_list) + 0.5),
     )
     plt.tight_layout()
+    plt.savefig(f"./images/compare_plot/{fx}_{interval}_{n}.png", dpi=300)
     plt.show()
 
     print(f"f(x) = {fx}, interval = {interval}\n")
