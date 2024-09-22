@@ -79,4 +79,4 @@ MAE of interpolation: 0.0021889162615582602
 
 ## Evaluation of error v.s. polynomial degrees
 
-![log-Max-Error Versus Degree](./images/log-Max-Error Versus Degree.png)
+![log-Max-Error_Versus_Degree](./images/log-Max-Error_Versus_Degree.png)
