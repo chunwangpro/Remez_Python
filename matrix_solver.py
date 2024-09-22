@@ -53,7 +53,7 @@ def matrix_solver(fx, fx_der, xn, interval, n):
     # form the polynomial approximation function px
     # px = f"{an[0]}" + "".join([f" + {an[i]} * x**{i}" for i in range(1, n + 1)])
     # or more elegant
-    px = ensemble_polynomial(an, use_smart_round=False, keep_first_zeros=True)
+    px = ensemble_polynomial(an, smart_round=False, keep_first_zeros=True)
 
     # error function and its derivative, do not touch this line
     err = lambda x: eval(fx) - eval(px)

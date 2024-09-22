@@ -62,5 +62,5 @@ def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30):
             # In case matrix become singular after many iterations and matrix_solver fails
             xn = history["xn"][-1]
             break
-    px = ensemble_polynomial(an, use_smart_round=False, keep_first_zeros=True)
+    px = ensemble_polynomial(an, smart_round=False, keep_first_zeros=True)
     return px, xn, history

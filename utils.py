@@ -1,4 +1,4 @@
-def smart_round(coeff, tolerance=1e-10):
+def round_or_decimal(coeff, tolerance=1e-10):
     """Round to integer or keep 9 decimal."""
     if abs(coeff - round(coeff)) < tolerance:
         return round(coeff)
@@ -30,7 +30,7 @@ def get_format_power(coeff_str, power):
         return f"{coeff_str} * x**{power}" if coeff_str else f"x**{power}"
 
 
-def ensemble_polynomial(an, use_smart_round=True, keep_all_zeros=False, keep_first_zeros=True):
+def ensemble_polynomial(an, smart_round=True, keep_all_zeros=False, keep_first_zeros=True):
     """
     Ensemble px by input coefficient an, make it clean and beauty.
 
@@ -39,8 +39,8 @@ def ensemble_polynomial(an, use_smart_round=True, keep_all_zeros=False, keep_fir
     n = len(an) - 1
     skip_zero = False if keep_first_zeros else True
 
-    if use_smart_round:
-        an = [smart_round(a) for a in an]
+    if smart_round:
+        an = [round_or_decimal(a) for a in an]
 
     for i in range(n, -1, -1):
         coeff = an[i]
