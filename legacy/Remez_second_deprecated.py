@@ -1,8 +1,16 @@
 # Numerical Analysis: Best Uniform Approximation
-"""
-Created on Tue Dec 17 12:41:25 2019
 
-@author: Wang Chun, School of Mathematics & Statistics, Wu Han University, China.
+
+"""
+This is the original version of the Remez algorithm, which is deprecated.
+Please refer to the Remez.py for the latest version.
+"""
+
+
+"""
+Tuesday Dec/17/2019 12:41:25
+
+@author: Chun Wang, School of Mathematics & Statistics, Wu Han University, China.
 """
 import time
 
