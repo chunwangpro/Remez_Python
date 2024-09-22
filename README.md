@@ -8,16 +8,16 @@ A similar C++ [library](https://github.com/samhocevar/lolremez?tab=readme-ov-fil
 
 ## Basic usage
 
-Write the math expression of F(x) and its derivative in string like Numpy or Sympy style, then set approximation interval and polynomial degrees. 
+Write the math expression of f(x) and its derivative f'(x) in Numpy or Sympy string like style, then set approximation interval and polynomial degrees. 
 
 For example:
 
 Approximate `atan(sqrt(3+x³)-exp(1+x))` over the interval `[sqrt(2),pi²]` with 5-th degree polynomial:
 
 ```python
-# F(x)
+# f(x)
 fx = "np.arctan(np.sqrt(3 + x**3) - np.exp(1 + x))"
-# F'(x)
+# f'(x)
 g = "(np.sqrt(3 + x**3) - np.exp(1 + x))"
 g_prime = "((3 * x**2) / (2 * np.sqrt(3 + x**3)) - np.exp(1 + x))"
 fx_der = f"({g_prime}) / (1 + {g}**2)"
@@ -39,14 +39,14 @@ xn points:
 [1.41421356 1.83693284 3.14845216 5.17561358 7.42752857 9.19850669
  9.8696044 ]
 
-converge iteration: 7
+Converge iteration: 7
 MAE of approximation: 0.0012079008992569307
 MAE of interpolation: 0.0021889162615582602
 ```
 
 ![single_3](./images/single_plot/single_3.png)
 
-Compare Remez approximation with Lagrange interpolation, as figure shows, our method has lower Max-Error and achieved equioscillation on the interval.
+Compare Remez approximation with Lagrange interpolation, as figure shows, our method has lower Max-Error and achieved equioscillation on the whole interval.
 
 ## Examples of smooth function
 
