@@ -7,3 +7,4 @@ __pycache__
 
 # folders: saved models & results & logs & tensorboard
 # logs/
+legacy/output/
