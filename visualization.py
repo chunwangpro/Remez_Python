@@ -20,7 +20,7 @@ def visualization(fx, px, xn, history, interval, n, compare_interpolation=True):
 
     plt.xlabel("X Interval")
     plt.ylabel("Error")
-    plt.title(f"Error on Interval {interval}, degree = {n}\nF(x)= {fx}")
+    plt.title(f"Error on Interval {interval}, degree = {n}\nf(x)= {fx}")
     plt.legend(loc="center", bbox_to_anchor=(0.5, -0.25), ncol=4)
     plt.tight_layout()
     plt.savefig(f"./images/single_plot/{fx}_{interval}_{n}.png", dpi=300)
@@ -28,9 +28,9 @@ def visualization(fx, px, xn, history, interval, n, compare_interpolation=True):
 
     print(f"f(x) = {fx}, interval = {interval}\n")
     print(f"polynomial degree = {n}")
-    print(f"pn(x):\n{px}\n")
+    print(f"Pn(x):\n{px}\n")
     print(f"xn points:\n{xn}\n")
-    print(f"converge iteration: {len(history['e'])}")
+    print(f"Converge iteration: {len(history['e'])}")
     print(f"MAE of approximation: {max(np.abs(Approx_err_interval))}")
     print(f"MAE of interpolation: {max(np.abs(Interp_err_interval))}")
 
@@ -58,7 +58,7 @@ def visualization_pipeline(fx, px, xn, history, interval, n, history_error=None)
 
         plt.xlabel("X Interval")
         plt.ylabel("Error")
-        plt.title(f"Error on Interval {interval}, degree = {n}\nF(x)= {fx}")
+        plt.title(f"Error on Interval {interval}, degree = {n}\nf(x)= {fx}")
         plt.legend(loc="center", bbox_to_anchor=(0.5, -0.25), ncol=4)
         plt.tight_layout()
         plt.savefig(f"./images/pipeline_plot/{fx}_{interval}_{n}.png", dpi=300)
@@ -66,9 +66,9 @@ def visualization_pipeline(fx, px, xn, history, interval, n, history_error=None)
 
         print(f"f(x) = {fx}, interval = {interval}\n")
         print(f"polynomial degree = {n}")
-        print(f"pn(x):\n{px}\n")
+        print(f"Pn(x):\n{px}\n")
         print(f"xn points:\n{xn}\n")
-        print(f"converge iteration: {len(history['e'])}")
+        print(f"Converge iteration: {len(history['e'])}")
         print(f"MAE of approximation: {max(np.abs(Approx_err_interval))}")
         print(f"MAE of interpolation: {max(np.abs(Interp_err_interval))}")
     return max_interval_error if whether_continue else None
@@ -92,7 +92,7 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
     ax[0].set(
         xlabel="X Interval",
         ylabel="Error",
-        title=f"Error on Interval {interval}, degree = {n}\nF(x)= {fx}",
+        title=f"Error on Interval {interval}, degree = {n}\nf(x)= {fx}",
     )
     box = ax[0].get_position()
     ax[0].set_position([box.x0, box.y0, box.width, box.height * 0.8])
@@ -112,7 +112,7 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
     ax[1].set(
         xlabel="X Interval",
         ylabel="Y",
-        title=f"F(x)",
+        title=f"f(x)",
         # xticks=np.linspace(1, 10, 10),
         # xlim=(0.5, len(err_list) + 0.5),
     )
@@ -122,8 +122,8 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
 
     print(f"f(x) = {fx}, interval = {interval}\n")
     print(f"polynomial degree = {n}")
-    print(f"pn(x) = \n{px}\n")
+    print(f"Pn(x) = \n{px}\n")
     print(f"xn points:\n{xn}\n")
-    print(f"converge iteration: {len(history['e'])}")
+    print(f"Converge iteration: {len(history['e'])}")
     print(f"MAE of approximation: {max(np.abs(Approx_err_interval))}")
     print(f"MAE of interpolation: {max(np.abs(Interp_err_interval))}")
