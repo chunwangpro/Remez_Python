@@ -1,7 +1,7 @@
 from matrix_solver import *
 
 
-def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30):
+def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30, smart_round=False):
     """
     The iterative approach is adopted, progressively adjusting the extremal points to find the alternation point set (xn) and the approximation polynomial of given degree (px) that minimize the max absolute error (at given interval).
 
@@ -62,5 +62,5 @@ def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30):
             # In case matrix become singular after many iterations and matrix_solver fails
             xn = history["xn"][-1]
             break
-    px = ensemble_polynomial(an, smart_round=False, keep_first_zeros=True)
+    px = ensemble_polynomial(an, smart_round, keep_first_zeros=True)
     return px, xn, history
