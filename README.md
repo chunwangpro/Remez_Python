@@ -48,7 +48,7 @@ MAE of interpolation: 0.0021889162615582602
 
 Compare Remez approximation with Lagrange interpolation, as figure shows, our method has lower Max-Error and achieved equioscillation on the interval.
 
-## Examples of smooth functions
+## Examples of smooth function
 
 ### sin(x)
 
@@ -70,7 +70,7 @@ Compare Remez approximation with Lagrange interpolation, as figure shows, our me
 
 ![pipeline_11](./images/pipeline_plot/pipeline_11.png)
 
-## Example of non-smooth functions
+## Examples of non-smooth function
 
 ### abs(sin(x))
 
