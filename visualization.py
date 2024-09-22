@@ -27,7 +27,7 @@ def visualization(fx, px, xn, history, interval, n, compare_interpolation=True):
     plt.show()
 
     print(f"f(x) = {fx}, interval = {interval}\n")
-    print(f"polynomial degree = {n}")
+    print(f"Polynomial degree = {n}")
     print(f"Pn(x):\n{px}\n")
     print(f"xn points:\n{xn}\n")
     print(f"Converge iteration: {len(history['e'])}")
@@ -65,7 +65,7 @@ def visualization_pipeline(fx, px, xn, history, interval, n, history_error=None)
         plt.show()
 
         print(f"f(x) = {fx}, interval = {interval}\n")
-        print(f"polynomial degree = {n}")
+        print(f"Polynomial degree = {n}")
         print(f"Pn(x):\n{px}\n")
         print(f"xn points:\n{xn}\n")
         print(f"Converge iteration: {len(history['e'])}")
@@ -121,7 +121,7 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
     plt.show()
 
     print(f"f(x) = {fx}, interval = {interval}\n")
-    print(f"polynomial degree = {n}")
+    print(f"Polynomial degree = {n}")
     print(f"Pn(x) = \n{px}\n")
     print(f"xn points:\n{xn}\n")
     print(f"Converge iteration: {len(history['e'])}")
