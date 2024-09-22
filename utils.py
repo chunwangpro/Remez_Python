@@ -8,8 +8,8 @@ def smart_round(coeff, tolerance=1e-10):
 
 def get_sign(coeff, is_first_term):
     if is_first_term:
-        return "-" if coeff < 0 else ""
-    return "-" if coeff < 0 else "+"
+        return "- " if coeff < 0 else ""
+    return " - " if coeff < 0 else " + "
 
 
 def get_format_coeff(coeff, power):
@@ -58,7 +58,7 @@ def ensemble_polynomial(an, use_smart_round=True, keep_all_zeros=False, keep_fir
         sign = get_sign(coeff, is_first_term)
         coeff_str = get_format_coeff(coeff, i)
         term = get_format_power(coeff_str, i)
-        terms.append(f" {sign} {term}" if sign else f"{term}")
+        terms.append(f"{sign}{term}")  # if sign else f"{term}")
     px = "".join(terms)
     return px
 

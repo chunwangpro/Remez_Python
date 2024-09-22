@@ -1,5 +1,4 @@
 from matrix_solver import *
-from utils import *
 
 
 def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30):
