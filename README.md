@@ -8,7 +8,7 @@ A similar C++ [library](https://github.com/samhocevar/lolremez?tab=readme-ov-fil
 
 ## Basic usage
 
-Write the math expression of f(x) and its derivative f'(x) in Numpy or Sympy string like style, then set approximation interval and polynomial degrees. 
+Write the math expression of $f(x)$ and its derivative $f'(x)$ in Numpy or Sympy string like style, then set approximation interval and polynomial degrees. 
 
 For example:
 
@@ -31,7 +31,7 @@ visualization(fx, px, xn, history, interval, n)
 Results:
 
 ```bash
-pn(x):
+Pn(x):
 - 3.955756933047265e-05 * x**5 + 0.0012947712130833584 * x**4 - 0.01654139703555944 * x**3
 + 0.10351664953941357 * x**2 - 0.32051562487328494 * x - 1.1703528319321932
 
