@@ -12,11 +12,11 @@ def visualization(fx, px, xn, history, interval, n, compare_interpolation=True):
     )
 
     plt.figure(figsize=(14, 5))
-    plt.scatter(xn, Approx_err_xn, linewidth=1.5, label="Approximate Points")
-    plt.plot(x, Approx_err_interval, linewidth=3, label="Approximate Error")
+    plt.scatter(xn, Approx_err_xn, linewidth=1.5, label="Remez Approximation Points")
+    plt.plot(x, Approx_err_interval, linewidth=3, label="Remez Approximation Error")
     if compare_interpolation:
-        plt.scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Interpolate Points")
-        plt.plot(x, Interp_err_interval, linewidth=1.5, label="Interpolate Error")
+        plt.scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Lagrange Interpolation Points")
+        plt.plot(x, Interp_err_interval, linewidth=1.5, label="Lagrange Interpolation Error")
 
     plt.xlabel("X Interval")
     plt.ylabel("Error")
@@ -51,10 +51,10 @@ def visualization_pipeline(fx, px, xn, history, interval, n, history_error=None)
 
     if whether_continue:
         plt.figure(figsize=(14, 5))
-        plt.scatter(xn, Approx_err_xn, linewidth=1.5, label="Approximate Points")
-        plt.plot(x, Approx_err_interval, linewidth=3, label="Approximate Error")
-        plt.scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Interpolate Points")
-        plt.plot(x, Interp_err_interval, linewidth=1.5, label="Interpolate Error")
+        plt.scatter(xn, Approx_err_xn, linewidth=1.5, label="Remez Approximation Points")
+        plt.plot(x, Approx_err_interval, linewidth=3, label="Remez Approximation Error")
+        plt.scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Lagrange Interpolation Points")
+        plt.plot(x, Interp_err_interval, linewidth=1.5, label="Lagrange Interpolation Error")
 
         plt.xlabel("X Interval")
         plt.ylabel("Error")
@@ -84,10 +84,10 @@ def visualization_px_with_fx(fx, px, xn, history, interval, n):
 
     _, ax = plt.subplots(1, 2, figsize=(14, 5))
     ax = ax.flatten()
-    ax[0].scatter(xn, Approx_err_xn, linewidth=1.5, label="Approximate Points")
-    ax[0].plot(x, Approx_err_interval, linewidth=1.5, label="Approximate Error")
-    ax[0].scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Interpolate Points")
-    ax[0].plot(x, Interp_err_interval, "-", label="Interpolate Error")
+    ax[0].scatter(xn, Approx_err_xn, linewidth=1.5, label="Remez Approximation Points")
+    ax[0].plot(x, Approx_err_interval, linewidth=1.5, label="Remez Approximation Error")
+    ax[0].scatter(Interp_x, Interp_err_xn, linewidth=1.5, label="Lagrange Interpolation Points")
+    ax[0].plot(x, Interp_err_interval, "-", label="Lagrange Interpolation Error")
 
     ax[0].set(
         xlabel="X Interval",
