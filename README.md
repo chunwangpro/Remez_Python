@@ -87,3 +87,5 @@ Compare Remez approximation with Lagrange interpolation, as figure shows, our me
 Higher polynomial degree may result in lower error with a slight growth of time consumption.
 
 ![log-Max-Error_Versus_Degree](./images/log-Max-Error_Versus_Degree.png)
+
+Refer to examples.html for more details.
