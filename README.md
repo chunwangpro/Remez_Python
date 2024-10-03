@@ -1,4 +1,4 @@
-# Remez_Python
+# Remez: Best Uniform Approximation
 
 [![View In GitHub](https://img.shields.io/badge/%20View%20in-Github-blue?logo=github)](https://github.com/chunwangpro/Remez_Python)
 
