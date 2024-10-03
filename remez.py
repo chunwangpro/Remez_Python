@@ -34,7 +34,7 @@ def remez(fx, fx_der, interval, n, max_iters=50, tol=1e-30, smart_round=False):
     --------
     >>> fx = "np.sin(x)"
     >>> fx_der = "np.cos(x)"
-    >>> n = 2
+    >>> n = 10
     >>> interval = [-1, 1]
     >>> px, xn, history = remez(fx, fx_der, interval, n)
     """
