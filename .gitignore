@@ -1,4 +1,4 @@
-# __pycache__
+__pycache__
 .DS_Store
 **/.ipynb_checkpoints/
 */.ipynb_checkpoints/*
@@ -7,4 +7,4 @@
 
 # folders: saved models & results & logs & tensorboard
 # logs/
-legacy/output/
+legacy/
