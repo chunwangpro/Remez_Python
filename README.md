@@ -1,8 +1,8 @@
-# Remez: Best Uniform Approximation
+# Remez_Python
 
-[![View In GitHub](https://img.shields.io/badge/%20View%20in-Github-blue?logo=github)](https://github.com/chunwangpro/Remez_Python)
+#### Remez Approximation Solver [[Doc]](https://chunwangpro.github.io/Remez_Python/) [[Code]](https://github.com/chunwangpro/Remez_Python)
 
-Python implementation of  [Remez algorithm](https://en.wikipedia.org/wiki/Remez_algorithm),  provides the best uniform polynomial approximation to functions based on the minimization of the maximum absolute error and the [equioscillation theorem](https://en.wikipedia.org/wiki/Equioscillation_theorem).
+Python implementation of  [Remez Exchange Algorithm](https://en.wikipedia.org/wiki/Remez_algorithm),  provides the best uniform polynomial approximation to functions based on the minimization of the maximum absolute error and the [equioscillation theorem](https://en.wikipedia.org/wiki/Equioscillation_theorem).
 
 ## Similar library
 
